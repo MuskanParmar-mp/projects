@@ -1,0 +1,131 @@
+.homepage {
+    width: 100%;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 600px;
+
+    background: #1d3b5c;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 8%;
+
+    gap: 50px;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    width: 50%;
+}
+
+.subheading{
+    color: #ff7a2f;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-content h1 {
+    color: white;
+
+    font-size: 55px;
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #ffd166;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #cbd5e1;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 550px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn1 {
+    background: #ff7a2f;
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background: #e9651e;
+}
+
+
+.btn2 {
+    background: transparent;
+    color: white;
+
+    border: 2px solid #ff7a2f;
+
+    padding: 12px 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.btn2:hover {
+    background: #ff7a2f;
+}
+
+
+/* Hero Image */
+
+.hero-img {
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 520px;
+
+    border-radius: 20px;
+}

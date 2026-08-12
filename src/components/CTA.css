@@ -1,0 +1,63 @@
+.cta-section {
+    background: #101124;
+
+    padding: 80px 8%;
+
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.cta-content p {
+    color: #ff7a2f;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.cta-content h2 {
+    color: white;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.cta-content span {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+
+    background: #ff7a2f;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+}
+
+.cta-btn:hover {
+    background: #e9651e;
+}

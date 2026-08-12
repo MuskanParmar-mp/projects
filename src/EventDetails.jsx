@@ -1,0 +1,54 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import "/EventDetails.css";
+
+function EventDetails(){
+
+    const {id} = useParams();
+
+    const [events, setEvents] = useState([null]);
+
+  useEffect(() => {
+
+    axios
+      .get("http://127.0.0.1:8000/events/${id}/")
+      .then((response) => {
+        setEvents(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }, [id]);
+
+
+  if(!event){
+    return <h2> Loading...</h2>
+  }
+
+  return (
+    <section className="events-details-page">
+
+      <div className="events-details-card">
+
+        <p className="event-label">CYBROM CAMPUSCONNECT</p>
+
+        <h1>{event.title}</h1>
+
+        <p className="event-description"> {event.description}</p>
+
+
+        <div className="event-info">
+            <p> <strong> Date:</strong> {event.date}</p>
+             <p> <strong> Time:</strong> {event.time}</p>
+              <p> <strong> Venue:</strong> {event.venue}</p>
+
+
+        </div>
+      </div>  
+
+    </section>    
+        )
+
+}
