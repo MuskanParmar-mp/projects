@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "/EventDetails.css";
+import "./EventDetails.css";
 
-function EventDetails(){
+function EventDetails() {
 
-    const {id} = useParams();
+  const { id } = useParams();
 
-    const [events, setEvents] = useState([null]);
+  const [event, setEvent] = useState(null);
 
   useEffect(() => {
 
     axios
-      .get("http://127.0.0.1:8000/events/${id}/")
+      .get(`http://127.0.0.1:8000/events/${id}/`)
       .then((response) => {
-        setEvents(response.data);
+        setEvent(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -23,32 +23,52 @@ function EventDetails(){
   }, [id]);
 
 
-  if(!event){
-    return <h2> Loading...</h2>
+  if (!event) {
+    return <h2>Loading...</h2>;
   }
 
+
   return (
-    <section className="events-details-page">
+    <section className="event-details-page">
 
-      <div className="events-details-card">
+      <div className="event-details-card">
 
-        <p className="event-label">CYBROM CAMPUSCONNECT</p>
+        <p className="event-label">
+          CYBROM CAMPUSCONNECT
+        </p>
 
         <h1>{event.title}</h1>
 
-        <p className="event-description"> {event.description}</p>
+        <p className="event-description">
+          {event.description}
+        </p>
 
 
         <div className="event-info">
-            <p> <strong> Date:</strong> {event.date}</p>
-             <p> <strong> Time:</strong> {event.time}</p>
-              <p> <strong> Venue:</strong> {event.venue}</p>
 
+          <p>
+            <strong>Date:</strong> {event.date}
+          </p>
+
+          <p>
+            <strong>Time:</strong> {event.time}
+          </p>
+
+          <p>
+            <strong>Venue:</strong> {event.venue}
+          </p>
 
         </div>
-      </div>  
 
-    </section>    
-        )
 
+        <button className="register-event-btn">
+          Register for Event
+        </button>
+
+      </div>
+
+    </section>
+  );
 }
+
+export default EventDetails;

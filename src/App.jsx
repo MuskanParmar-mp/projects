@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 import Footer from "./Footer";
 import EventList from "./EventList";
 
+import "./App.css";
+
 function App(){
 
   

@@ -1,0 +1,107 @@
+.register-page {
+    min-height: 650px;
+
+    background: #101124;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+.register-box {
+    background: white;
+
+    width: 400px;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.register-small {
+    color: #ff7a2f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+.register-box h1 {
+    text-align: center;
+
+    color: #101124;
+
+    margin: 10px 0;
+}
+
+.register-text {
+    text-align: center;
+
+    color: #64748b;
+
+    margin-bottom: 30px;
+}
+
+.register-box form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.register-box label {
+    color: #334155;
+
+    font-weight: 600;
+
+    margin-top: 10px;
+}
+
+.register-box input {
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.register-box input:focus {
+    border-color: #ff7a2f;
+}
+
+.register-box button {
+    margin-top: 20px;
+
+    padding: 13px;
+
+    background: #ff7a2f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.register-box button:hover {
+    background: #e9651e;
+}
