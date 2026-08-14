@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
 import "./EventDetails.css";
-
 
 function EventDetails() {
 
     const { id } = useParams();
 
     const [event, setEvent] = useState(null);
+
 
     useEffect(() => {
 
@@ -23,6 +22,31 @@ function EventDetails() {
             });
 
     }, [id]);
+
+
+    const handleRegister = () => {
+
+        const username = localStorage.getItem("username");
+
+        if (!username) {
+            alert("Please login first");
+            return;
+        }
+
+        axios
+            .post(
+                `http://127.0.0.1:8000/events/${id}/register/`,
+                {
+                    username: username
+                }
+            )
+            .then((response) => {
+                alert(response.data.message);
+            })
+            .catch((error) => {
+                alert(error.response.data.message);
+            });
+    };
 
 
     if (!event) {
@@ -61,7 +85,10 @@ function EventDetails() {
 
                 </div>
 
-                <button className="register-event-btn">
+                <button
+                    className="register-event-btn"
+                    onClick={handleRegister}
+                >
                     Register for Event
                 </button>
 

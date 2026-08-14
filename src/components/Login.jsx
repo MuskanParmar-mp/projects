@@ -15,8 +15,11 @@ function Login() {
         username: username,
         password: password,
       })
+     
       .then((response) => {
         alert(response.data.message);
+
+        localStorage.setItem("username", response.data.username);
       })
       .catch((error) => {
         alert(error.response.data.message);
