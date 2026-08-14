@@ -1,4 +1,7 @@
-function EventCard({ title, description, date, time, venue }) {
+import { NavLink } from "react-router-dom";
+
+function EventCard({ id, title, description, date, time, venue }) {
+
   return (
     <div className="event-card">
 
@@ -13,14 +16,21 @@ function EventCard({ title, description, date, time, venue }) {
         <p>{description}</p>
 
         <div className="event-details">
+
           <span>📅 {date}</span>
+
           <span>⏰ {time}</span>
+
           <span>📍 {venue}</span>
+
         </div>
 
-        <button className="event-btn">
+        <NavLink
+          to={`/events/${id}`}
+          className="event-btn"
+        >
           View Details
-        </button>
+        </NavLink>
 
       </div>
 

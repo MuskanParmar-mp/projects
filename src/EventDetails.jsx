@@ -1,74 +1,74 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+
 import "./EventDetails.css";
+
 
 function EventDetails() {
 
-  const { id } = useParams();
+    const { id } = useParams();
 
-  const [event, setEvent] = useState(null);
+    const [event, setEvent] = useState(null);
 
-  useEffect(() => {
+    useEffect(() => {
 
-    axios
-      .get(`http://127.0.0.1:8000/events/${id}/`)
-      .then((response) => {
-        setEvent(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        axios
+            .get(`http://127.0.0.1:8000/events/${id}/`)
+            .then((response) => {
+                setEvent(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
 
-  }, [id]);
-
-
-  if (!event) {
-    return <h2>Loading...</h2>;
-  }
+    }, [id]);
 
 
-  return (
-    <section className="event-details-page">
-
-      <div className="event-details-card">
-
-        <p className="event-label">
-          CYBROM CAMPUSCONNECT
-        </p>
-
-        <h1>{event.title}</h1>
-
-        <p className="event-description">
-          {event.description}
-        </p>
+    if (!event) {
+        return <h2>Loading...</h2>;
+    }
 
 
-        <div className="event-info">
+    return (
+        <section className="event-details-page">
 
-          <p>
-            <strong>Date:</strong> {event.date}
-          </p>
+            <div className="event-details-card">
 
-          <p>
-            <strong>Time:</strong> {event.time}
-          </p>
+                <p className="event-label">
+                    CYBROM CAMPUSCONNECT
+                </p>
 
-          <p>
-            <strong>Venue:</strong> {event.venue}
-          </p>
+                <h1>{event.title}</h1>
 
-        </div>
+                <p className="event-description">
+                    {event.description}
+                </p>
 
+                <div className="event-info">
 
-        <button className="register-event-btn">
-          Register for Event
-        </button>
+                    <p>
+                        <strong>Date:</strong> {event.date}
+                    </p>
 
-      </div>
+                    <p>
+                        <strong>Time:</strong> {event.time}
+                    </p>
 
-    </section>
-  );
+                    <p>
+                        <strong>Venue:</strong> {event.venue}
+                    </p>
+
+                </div>
+
+                <button className="register-event-btn">
+                    Register for Event
+                </button>
+
+            </div>
+
+        </section>
+    );
 }
 
 export default EventDetails;

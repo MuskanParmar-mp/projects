@@ -7,6 +7,7 @@ import Register from "./components/Register";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./Footer";
 import EventList from "./EventList";
+import EventDetails from "./EventDetails";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App(){
        <Route path="/login" element={<Login/> }/>
        <Route path="/register" element={<Register/> }/>
        <Route path="/events" element={<EventList/> }/>
+       <Route path="/events/:id" element={<EventDetails />} />
      </Routes>
 
      <Footer />
