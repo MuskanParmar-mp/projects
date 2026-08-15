@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 
@@ -6,6 +7,8 @@ function Register() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -17,8 +20,10 @@ function Register() {
       })
       .then((response) => {
         alert(response.data.message);
-        setUsername("");
-        setPassword("");
+
+        localStorage.setItem("username", username);
+
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -52,7 +57,6 @@ function Register() {
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-
 
           <label>Password</label>
 
