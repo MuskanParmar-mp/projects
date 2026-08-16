@@ -16,7 +16,7 @@ function Home(){
         </div>
 
         <div className="hero-content">
-          <p className="subheading"> WELCOME TO CYBROM CAMPUSCONNECT </p>
+          <p className="subheading"> WELCOME  TO  CYBROM  CAMPUSCONNECT </p>
           <h1> Empower Your Skills
             <br />
             With Cybrom Events </h1>
