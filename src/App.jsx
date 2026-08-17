@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
+import MyEvents from "./components/MyEvents";
 
 import Navbar from "./components/Navbar";
 
@@ -8,6 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import EventList from "./EventList";
 import EventDetails from "./EventDetails";
+
 import Footer from "./Footer";
 
 import "./App.css";
@@ -32,6 +34,7 @@ function App() {
 
 
         <Route path="/events" element={<EventList />} />
+        <Route path="/my-events" element={<MyEvents />} />
         <Route path="/events/:id" element={<EventDetails />} />
       </Routes>
 

@@ -72,6 +72,10 @@ function Navbar() {
             <NavLink to="/about">About</NavLink>
           </li>
 
+          <li>
+  <NavLink to="/my-events">My Events</NavLink>
+</li>
+
         </ul>
 
 
