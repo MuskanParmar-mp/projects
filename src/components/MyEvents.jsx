@@ -4,6 +4,8 @@ import "./MyEvents.css";
 
 function MyEvents() {
 
+
+  
   const [registrations, setRegistrations] = useState([]);
 
   const username = localStorage.getItem("username");
